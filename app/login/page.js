@@ -29,7 +29,7 @@ export default function LoginPage() {
             // localStorage.setItem('token', res.data.token)
             const token = res.data.token
 
-            Cookies.set('token', res.data.token)
+            Cookies.set('token', res.data.token,{ expires: 1 })
 
             console.log('Logging in with:', formData);
             console.log('Token:', res.data.token);

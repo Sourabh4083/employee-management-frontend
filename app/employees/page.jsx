@@ -20,7 +20,8 @@ export default function EmployeeList() {
     const router = useRouter()
 
     useEffect(() => {
-        const token = localStorage.getItem('token')
+        // const token = localStorage.getItem('token')
+        const token = Cookies.get('token')
         if (!token) {
             router.replace('/login')
         }
