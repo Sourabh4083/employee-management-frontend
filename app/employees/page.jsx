@@ -29,7 +29,7 @@ export default function EmployeeList() {
 
     const fetchEmployees = async () => {
         try {
-            const response = await API.get('/employees', {
+            const response = await API.get('/api/employees', {
                 params: {
                     page,
                     limit,
@@ -58,7 +58,7 @@ export default function EmployeeList() {
         }
 
         try {
-            await API.delete(`/employees/${id}`, {
+            await API.delete(`/api/employees/${id}`, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }

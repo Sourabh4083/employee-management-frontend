@@ -26,7 +26,7 @@ export default function Dashboard() {
 
     const fetchStats = async () => {
       try {
-        const res = await API.get('/employees',{
+        const res = await API.get('/api/employees',{
             params: { page: 1, limit: 1000 }
         })
         const employees = res.data.employees || []

@@ -22,7 +22,7 @@ export default function EditEmployee() {
     useEffect(() => {
         const fetchEmployee = async () => {
             try {
-                const res = await API.get(`/employees/${id}`)
+                const res = await API.get(`/api/employees/${id}`)
                 setFormData(res.data)
             } catch (err) {
                 console.error('Error loading employee:', err)
@@ -46,7 +46,7 @@ export default function EditEmployee() {
         }
 
         try {
-            await API.put(`/employees/${id}`, formData, {
+            await API.put(`/api/employees/${id}`, formData, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }

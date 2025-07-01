@@ -32,7 +32,7 @@ export default function AddEmployee() {
         }
 
         try {
-            await API.post('/employees', formData, {
+            await API.post('/api/employees', formData, {
                 headers: {
                     Authorization: `Bearer ${token}` // ✅ Send token to backend
                 }
